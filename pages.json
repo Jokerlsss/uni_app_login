@@ -1,0 +1,27 @@
+{
+	"easycom": {
+		// 下载安装的方式需要前面的"@/"，npm安装的方式无需"@/"
+		// 下载安装方式
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		// npm安装方式
+		// "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"enablePullDownRefresh": false,
+			"navigationStyle": "custom"
+		}
+	}],
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#FF5242",
+		"backgroundColor": "#FFFFFF",
+		"navigationBarShadow": "grey",
+		"navigationStyle": "default",
+		"app-plus":{
+			// adjustPan: 界面会随键盘弹起而增加滚动条,
+			// adjustResize：界面会固定不动
+			"softinputMode": "adjustResize"
+		}
+	}
+}
