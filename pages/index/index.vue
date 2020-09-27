@@ -154,34 +154,37 @@
 			clearInput(value) {
 				switch (value) {
 					case 'userName':
-						setTimeout(() => {
+						// setTimeout(() => {
 							this.userLoginInfo.userName = ''
 							// 清空内容之后保持焦点
 							this.un = false
 							this.$nextTick(() => {
 								this.un = true
 							})
-						}, 2)
+						// }, 2)
 						break
 					case 'password':
-						setTimeout(() => {
+						// setTimeout(() => {
 							this.userLoginInfo.password = ''
 							this.pd = false
 							this.$nextTick(() => {
 								this.pd = true
 							})
-						}, 2)
+						// }, 2)
 						break
 				}
 			},
 
 			login() {
 				// 密码正确
-				this.isLogining = false
-				this.$refs.uToast.show({
-					title: '登录成功',
-					type: 'success'
-				})
+				this.isLogining = true
+				setTimeout(()=>{
+					this.isLogining = false
+					this.$refs.uToast.show({
+						title: '登录成功',
+						type: 'success'
+					})
+				},2000)
 			}
 		},
 		watch: {
